@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+xgboost
+numpy
+pywavelets
+scipy
+scikit-learn
