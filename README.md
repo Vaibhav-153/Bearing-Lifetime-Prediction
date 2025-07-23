@@ -34,19 +34,7 @@ The core of the solution is a two-part process:
 
 The project is organized into distinct directories for clarity and maintainability.
 
-/
-|--- data/ # Raw IMS Bearing Data
-|--- notebooks/ # Jupyter notebooks for experimentation (Phase 1)
-|--- bearing_app/ # The deployable application source code
-| |--- assets/ # Contains the trained model and config files
-| |--- init.py
-| |--- main.py # FastAPI application and API endpoints
-| |--- prognosticator.py # Core class for feature extraction and prediction
-| --- requirements.txt # Application dependencies 
-|--- .gitignore # Files and folders for Git to ignore 
-|--- Dockerfile # Blueprint for building the application container
-|--- README.md # This file
-
+<pre> bearing-lifetime-prediction/ ├── data/ # Raw IMS Bearing Data ├── notebooks/ # Jupyter notebooks for experimentation (Phase 1) ├── bearing_app/ # The deployable application source code │ ├── assets/ # Contains the trained model and config files │ ├── __init__.py │ ├── main.py # FastAPI application and API endpoints │ ├── prognosticator.py # Core class for feature extraction and prediction ├── requirements.txt # Application dependencies ├── .gitignore # Files and folders for Git to ignore ├── Dockerfile # Blueprint for building the application container └── README.md # Project documentation (this file) </pre>
 
 ---
 
