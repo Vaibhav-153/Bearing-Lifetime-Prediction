@@ -1,0 +1,16 @@
+.git
+.github
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+Data/
+notebooks/
+reports/
+tests/
+dashboard.py
+requirements*.txt
+!bearing_app/requirements.txt
+README.md

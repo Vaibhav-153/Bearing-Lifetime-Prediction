@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: bearing-rul-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
