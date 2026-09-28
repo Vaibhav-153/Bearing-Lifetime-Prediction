@@ -9,7 +9,6 @@ import pandas as pd
 import requests
 import streamlit as st
 
-
 DEFAULT_API_URL = "https://bearing-remaining-lifetime-prediction.onrender.com/predict"
 API_URL = os.getenv("BEARING_API_URL", DEFAULT_API_URL)
 WINDOW_SIZE = 15
@@ -58,8 +57,7 @@ uploaded_files = st.file_uploader(
 if uploaded_files:
     if len(uploaded_files) != WINDOW_SIZE:
         st.warning(
-            f"Upload exactly {WINDOW_SIZE} files. "
-            f"Currently selected: {len(uploaded_files)}."
+            f"Upload exactly {WINDOW_SIZE} files. Currently selected: {len(uploaded_files)}."
         )
     else:
         ordered_files = sorted(uploaded_files, key=lambda file: file.name)

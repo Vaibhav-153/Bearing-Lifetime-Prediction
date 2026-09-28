@@ -7,7 +7,6 @@ from collections.abc import Sequence
 import numpy as np
 import pywt
 
-
 DEFAULT_WAVELET = "morl"
 
 
@@ -47,9 +46,6 @@ def extract_health_indicators(
 ) -> np.ndarray:
     """Calculate one health-indicator value for each vibration snapshot."""
     return np.asarray(
-        [
-            calculate_health_indicator(signal, wavelet_scale, wavelet_name)
-            for signal in signals
-        ],
+        [calculate_health_indicator(signal, wavelet_scale, wavelet_name) for signal in signals],
         dtype=float,
     )

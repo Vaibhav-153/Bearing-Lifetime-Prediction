@@ -20,9 +20,7 @@ class BearingPrognosticator:
             raise FileNotFoundError(f"Model file not found: {model_path}")
 
         self.window_size = int(config["window_size"])
-        self.wavelet_scale = float(
-            config.get("wavelet_scale", config.get("optimal_alpha", 0.0))
-        )
+        self.wavelet_scale = float(config.get("wavelet_scale", config.get("optimal_alpha", 0.0)))
 
         if self.window_size <= 0:
             raise ValueError("window_size must be greater than zero.")
@@ -36,8 +34,7 @@ class BearingPrognosticator:
         """Predict RUL in dataset cycles for one chronological signal window."""
         if len(raw_signal_sequence) != self.window_size:
             raise ValueError(
-                f"Expected {self.window_size} signal windows, "
-                f"received {len(raw_signal_sequence)}."
+                f"Expected {self.window_size} signal windows, received {len(raw_signal_sequence)}."
             )
 
         health_indicators = extract_health_indicators(

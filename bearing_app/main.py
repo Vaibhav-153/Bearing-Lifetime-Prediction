@@ -11,7 +11,6 @@ from pydantic import BaseModel, ConfigDict
 
 from .prognosticator import BearingPrognosticator
 
-
 PACKAGE_DIR = Path(__file__).resolve().parent
 ASSET_DIR = PACKAGE_DIR / "Assets"
 MODEL_PATH = ASSET_DIR / "model.json"

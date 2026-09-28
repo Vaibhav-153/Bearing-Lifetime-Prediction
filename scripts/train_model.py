@@ -13,7 +13,6 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 
 from bearing_app.features import extract_health_indicators, to_signal_array
 
-
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "Data"
 ASSET_DIR = ROOT / "bearing_app" / "Assets"
@@ -67,10 +66,7 @@ def periodicity_score(signal: np.ndarray, wavelet_scale: float) -> float:
 
 def select_wavelet_scale(signal: np.ndarray) -> float:
     """Select the CWT scale with the highest periodicity score."""
-    scores = {
-        float(scale): periodicity_score(signal, float(scale))
-        for scale in SCALE_CANDIDATES
-    }
+    scores = {float(scale): periodicity_score(signal, float(scale)) for scale in SCALE_CANDIDATES}
     return max(scores, key=scores.get)
 
 
@@ -121,9 +117,7 @@ def main() -> None:
 
     for index, (run_name, signal_column) in enumerate(TRAIN_RUNS):
         signals = (
-            first_training_signals
-            if index == 0
-            else load_signal_column(run_name, signal_column)
+            first_training_signals if index == 0 else load_signal_column(run_name, signal_column)
         )
         health_indicators = extract_health_indicators(signals, wavelet_scale)
         features, targets = create_sliding_window_data(health_indicators)
