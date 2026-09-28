@@ -32,3 +32,6 @@ reports/*.json
 # Local raw dataset copies can be large. Keep the existing repository data layout
 # only if you intentionally want those files versioned.
 Data/**/*.zip
+Data/
+IMS/
+IMS.zip
