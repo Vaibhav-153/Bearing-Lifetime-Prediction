@@ -1,5 +1,27 @@
 # Bearing Lifetime Prediction
 
+End-to-end Remaining Useful Life (RUL) prediction for rolling bearings using vibration signals, wavelet-based health indicators, XGBoost, FastAPI, and Streamlit.
+
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![XGBoost](https://img.shields.io/badge/Model-XGBoost-orange)
+![FastAPI](https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi)
+![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B?logo=streamlit)
+![Docker](https://img.shields.io/badge/Deployment-Docker-2496ED?logo=docker)
+
+## Overview
+
+This project predicts the Remaining Useful Life (RUL) of rolling bearings from vibration signals collected from the IMS bearing run-to-failure dataset.
+
+The pipeline combines:
+
+- Wavelet-based signal processing
+- Health indicator extraction
+- Sliding-window time-series features
+- XGBoost regression
+- FastAPI inference service
+- Streamlit dashboard
+- Docker deployment
+- Automated testing and Ruff linting
 This project estimates the Remaining Useful Life (RUL) of rolling bearings from vibration data in the IMS bearing dataset. It uses a wavelet-based health indicator, an XGBoost regression model, a FastAPI prediction service, and a Streamlit dashboard.
 
 The repository is mainly a learning and portfolio project. The model is not intended for production maintenance decisions without wider validation on more bearings and operating conditions.
